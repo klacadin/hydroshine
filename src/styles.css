@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --background: 198 100% 98%;
+  --foreground: 214 59% 12%;
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --primary: 199 89% 48%;
+  --card-foreground: 214 59% 12%;
+  --primary: 194 95% 49%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 50 98% 58%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 199 89% 48%;
+  --secondary: 197 100% 95%;
+  --secondary-foreground: 214 59% 12%;
+  --muted: 197 100% 96%;
+  --muted-foreground: 214 26% 42%;
+  --accent: 52 100% 58%;
+  --accent-foreground: 214 59% 12%;
+  --border: 198 58% 90%;
+  --input: 198 58% 90%;
+  --ring: 194 95% 49%;
   --radius: 0.75rem;
 }
 
@@ -29,12 +29,13 @@ body {
   margin: 0;
   min-width: 320px;
   font-family:
-    "Segoe UI", "Aptos", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    sans-serif;
+    "Trebuchet MS", "Segoe UI", "Aptos", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
   background:
-    radial-gradient(circle at 15% 0%, rgba(14, 165, 233, 0.16), transparent 28%),
-    radial-gradient(circle at 85% 0%, rgba(253, 224, 71, 0.18), transparent 24%),
-    linear-gradient(180deg, #f7fdff 0%, #f4fbfd 42%, #ffffff 100%);
+    radial-gradient(circle at 12% 10%, rgba(19, 185, 234, 0.18), transparent 26%),
+    radial-gradient(circle at 86% 12%, rgba(255, 217, 43, 0.18), transparent 22%),
+    radial-gradient(circle at 60% 65%, rgba(23, 165, 155, 0.09), transparent 25%),
+    linear-gradient(180deg, #f7fdff 0%, #eefcff 52%, #ffffff 100%);
   color: hsl(var(--foreground));
 }
 
@@ -43,5 +44,5 @@ html {
 }
 
 ::selection {
-  background: rgba(14, 165, 233, 0.2);
+  background: rgba(19, 185, 234, 0.22);
 }

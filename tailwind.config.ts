@@ -33,11 +33,13 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         hydro: {
-          blue: "#0284c7",
-          deep: "#075985",
-          teal: "#0f766e",
-          yellow: "#facc15",
-          mist: "#eff6ff",
+          blue: "#13b9ea",
+          deep: "#0b2b4d",
+          teal: "#17a59b",
+          yellow: "#ffd92b",
+          mist: "#e8fbff",
+          aqua: "#d7f7ef",
+          ink: "#081f36",
         },
       },
       borderRadius: {
@@ -46,7 +48,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        soft: "0 12px 30px rgba(2, 132, 199, 0.12)",
+        soft: "0 12px 30px rgba(19, 185, 234, 0.15)",
+        glow: "0 20px 60px rgba(19, 185, 234, 0.18)",
       },
     },
   },

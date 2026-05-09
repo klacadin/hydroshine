@@ -24,34 +24,38 @@ import { Label } from "./components/ui/Label";
 import { Select } from "./components/ui/Select";
 import { Textarea } from "./components/ui/Textarea";
 import { facebookConnection } from "./data/hydroshine";
+import brandBubble from "./assets/brand/openart-image_Ca_j6hZ5_1773434579828_raw.jpg";
+import brandMascot from "./assets/brand/openart-image_gExtOg1N_1773434598045_raw.jpg";
+import brandLogo from "./assets/brand/HydroShine Brand Assets & Templates.png";
+import brandPoster from "./assets/brand/HydroShine SocMed Template.jpg";
 
-const heroHighlights = [
-  "Fast mobile booking",
-  "Doorstep service",
+const highlights = [
+  "Fast Messenger booking",
+  "Doorstep convenience",
   "Premium finish",
-  "Warm, local support",
+  "Friendly local support",
 ];
 
-const features = [
+const reasons = [
   {
     icon: Truck,
-    title: "We come to you",
-    text: "Self-sufficient setup with water and power so the clean happens at your location.",
+    title: "We bring the setup",
+    text: "Water and power come with the team so the clean happens at your address.",
   },
   {
     icon: Clock3,
-    title: "Paspas promise",
-    text: "A quick, efficient standard wash without the waiting-room drag.",
+    title: "Quick, paspas service",
+    text: "Designed for busy people who want the car done without a long wait.",
   },
   {
     icon: ShieldCheck,
-    title: "Reliable finish",
-    text: "Consistent process, crisp results, and easy rebooking for repeat customers.",
+    title: "Consistent finish",
+    text: "Simple process, reliable result, and easier repeat bookings.",
   },
   {
     icon: Droplets,
-    title: "Hydro-smart wash",
-    text: "A water-conscious workflow built for clean results and less mess.",
+    title: "Hydro-smart workflow",
+    text: "Clean results with a practical setup built for real mobile work.",
   },
 ];
 
@@ -59,38 +63,38 @@ const packages = [
   {
     name: "Regular Wash",
     price: "From ₱350",
-    description: "A quick exterior clean for day-to-day upkeep.",
-    bullets: ["Exterior rinse and foam", "Wheels and tires refreshed", "Windows wiped clean"],
+    summary: "For everyday upkeep and quick refreshes.",
+    bullets: ["Exterior foam and rinse", "Wheels and windows refreshed", "Fast turnaround"],
   },
   {
     name: "Premium Wash",
     price: "From ₱650",
-    description: "A deeper shine for drivers who want a more polished look.",
-    bullets: ["Enhanced wash process", "Door jamb and detail touch-up", "Interior spot clean"],
+    summary: "For a more polished, better-looking result.",
+    bullets: ["Deeper clean process", "Extra detail touch-up", "Better showroom feel"],
   },
 ];
 
-const serviceRows = [
-  ["Sedan", "From ₱350", "From ₱650"],
-  ["SUV / Pickup", "From ₱450", "From ₱800"],
-  ["Van / Fleet", "From ₱550", "From ₱950"],
+const priceRows = [
+  ["Sedan", "₱350", "₱650"],
+  ["SUV / Pickup", "₱450", "₱800"],
+  ["Van / Fleet", "₱550", "₱950"],
 ];
 
 const addOns = [
   {
     icon: Bath,
     title: "Interior reset",
-    text: "Cabin vacuum, wipe-down, and quick refresh for busy vehicles.",
+    text: "Cabin vacuum and wipe-down for a cleaner daily drive.",
   },
   {
     icon: Sparkles,
-    title: "Add-on shine",
-    text: "Boost the finish with extra attention where it matters most.",
+    title: "Shine boost",
+    text: "Extra attention for the areas customers notice first.",
   },
   {
     icon: Waves,
     title: "Detail extras",
-    text: "Headlights, trim, and smaller problem areas handled on request.",
+    text: "Headlights, trim, and small problem spots handled on request.",
   },
 ];
 
@@ -99,19 +103,19 @@ const testimonials = [
     name: "A. Carter",
     role: "Busy parent",
     quote:
-      "I booked through Messenger, they showed up on time, and the car looked like it had a fresh reset.",
+      "Messenger booking was simple, they showed up on time, and the car looked freshly detailed.",
   },
   {
     name: "M. Nguyen",
     role: "Small business owner",
     quote:
-      "The process was simple, fast, and way easier than taking the truck somewhere after work.",
+      "Way easier than driving around for a wash. Clean result, quick communication, no hassle.",
   },
   {
     name: "J. Miller",
     role: "Repeat client",
     quote:
-      "The finish was clean and consistent. I rebooked before they even left the driveway.",
+      "I rebooked right away because the finish was clean and the service felt dependable.",
   },
 ];
 
@@ -143,48 +147,50 @@ export function App() {
   };
 
   return (
-    <main className="relative overflow-hidden bg-[#f4fbfd] text-slate-950">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.16),_transparent_32%),radial-gradient(circle_at_top_right,_rgba(56,189,248,0.18),_transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(244,251,253,1))]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-[repeating-linear-gradient(120deg,rgba(125,211,252,0.28)_0,rgba(125,211,252,0.28)_1px,transparent_1px,transparent_18px)] opacity-60" />
+    <main className="relative overflow-hidden bg-[#f7fdff] text-slate-950">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_10%,rgba(19,185,234,0.16),transparent_28%),radial-gradient(circle_at_88%_12%,rgba(255,217,43,0.18),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(247,253,255,1))]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[repeating-linear-gradient(120deg,rgba(19,185,234,0.22)_0,rgba(19,185,234,0.22)_1px,transparent_1px,transparent_20px)] opacity-50" />
 
-      <header className="sticky top-0 z-30 border-b border-sky-100/80 bg-white/85 backdrop-blur">
+      <header className="sticky top-0 z-30 border-b border-sky-100/80 bg-white/88 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <a href="#top" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-hydro-blue text-white shadow-soft">
-              <Sparkles className="h-5 w-5" />
-            </div>
-            <div>
+            <img
+              src={brandLogo}
+              alt="HydroShine"
+              className="h-12 w-auto object-contain sm:h-14"
+            />
+            <div className="hidden sm:block">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-hydro-teal">
-                HydroShine
+                Mobile wash and detailing
               </p>
               <p className="text-sm font-semibold text-slate-900">
-                Mobile wash and detailing
+                Built for convenience and repeat bookings
               </p>
             </div>
           </a>
 
-          <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+          <nav className="hidden items-center gap-6 text-sm font-semibold text-slate-600 md:flex">
             <a href="#services" className="transition hover:text-slate-950">
               Services
             </a>
-            <a href="#proof" className="transition hover:text-slate-950">
-              Results
+            <a href="#why" className="transition hover:text-slate-950">
+              Why us
             </a>
             <a href="#book" className="transition hover:text-slate-950">
-              Book Now
+              Book
             </a>
           </nav>
 
           <div className="flex items-center gap-2">
             <a
               href={facebookConnection.messengerUrl}
-              className="hidden rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-hydro-blue hover:text-hydro-blue sm:inline-flex"
+              className="hidden rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 shadow-sm transition hover:border-hydro-blue hover:text-hydro-blue sm:inline-flex"
             >
               Messenger
             </a>
             <a
               href="#book"
-              className="inline-flex items-center gap-2 rounded-full bg-hydro-blue px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-hydro-deep"
+              className="inline-flex items-center gap-2 rounded-full bg-hydro-blue px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-hydro-deep"
             >
               Book now
               <ChevronRight className="h-4 w-4" />
@@ -194,7 +200,7 @@ export function App() {
       </header>
 
       <section id="top" className="relative">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 pt-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-20 lg:pt-14">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 pt-10 sm:px-6 lg:grid-cols-[1.06fr_0.94fr] lg:items-center lg:pb-20 lg:pt-14">
           <div className="relative z-10">
             <Badge className="w-fit border border-sky-200 bg-white/85 text-hydro-deep">
               Clean → Shine → Convenience
@@ -203,8 +209,8 @@ export function App() {
               HydroShine brings a premium showroom shine to your doorstep.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700 sm:text-xl">
-              The fast mobile wash and detailing service for busy car owners who want
-              a cleaner vehicle without losing their day.
+              The mobile car wash and detailing service for busy drivers who want a
+              cleaner vehicle, a better look, and one less thing to worry about.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -225,10 +231,10 @@ export function App() {
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {heroHighlights.map((item) => (
+              {highlights.map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-3 rounded-2xl border border-sky-100 bg-white/75 px-4 py-3 shadow-sm"
+                  className="flex items-center gap-3 rounded-2xl border border-sky-100 bg-white/82 px-4 py-3 shadow-sm"
                 >
                   <CheckCircle2 className="h-5 w-5 text-hydro-teal" />
                   <span className="text-sm font-semibold text-slate-700">{item}</span>
@@ -243,7 +249,7 @@ export function App() {
               </span>
               <span className="inline-flex items-center gap-2">
                 <Clock3 className="h-4 w-4 text-hydro-blue" />
-                Fast booking response
+                Fast response
               </span>
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-hydro-blue" />
@@ -253,47 +259,76 @@ export function App() {
           </div>
 
           <div className="relative z-10">
-            <div className="absolute -left-6 top-12 hidden h-20 w-20 rounded-full bg-hydro-yellow/30 blur-2xl lg:block" />
+            <div className="absolute -left-5 top-12 hidden h-20 w-20 rounded-full bg-hydro-yellow/30 blur-2xl lg:block" />
             <div className="absolute -right-6 bottom-4 hidden h-24 w-24 rounded-full bg-sky-300/30 blur-2xl lg:block" />
-            <Card className="relative overflow-hidden border-sky-100 bg-white/90 p-3 shadow-[0_20px_70px_rgba(14,165,233,0.16)]">
+            <Card className="relative overflow-hidden border-sky-100 bg-white/92 p-3 shadow-glow">
               <img
-                src="/brand/hydroshine-hero.png"
-                alt="HydroShine mobile detailing illustration"
-                className="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
+                src={brandPoster}
+                alt="HydroShine social media template"
+                className="aspect-[1/1] w-full rounded-[1.5rem] object-cover object-center"
               />
-              <div className="absolute left-6 top-6 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-lg">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-hydro-teal">
-                  100% self-sufficient setup
+              <div className="absolute left-4 top-4 max-w-[220px] rounded-2xl border border-white/80 bg-white/92 px-4 py-3 shadow-lg">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-hydro-teal">
+                  At-home convenience
                 </p>
                 <p className="mt-1 text-sm text-slate-700">
-                  We bring water and power to your location.
+                  We come to you, so the car gets done without the extra trip.
                 </p>
               </div>
-              <div className="absolute bottom-6 right-6 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-lg">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-hydro-teal">
-                  Doorstep convenience
+              <div className="absolute bottom-4 right-4 rounded-2xl border border-white/80 bg-white/92 px-4 py-3 shadow-lg">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-hydro-teal">
+                  Paspas booking
                 </p>
                 <p className="mt-1 text-sm text-slate-700">
-                  Clean while you keep your day moving.
+                  Quick Messenger replies and short booking steps.
                 </p>
               </div>
             </Card>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <Card className="overflow-hidden border-sky-100 bg-white/95 p-3 shadow-sm">
+                <img
+                  src={brandMascot}
+                  alt="HydroShine mascot"
+                  className="aspect-square w-full rounded-[1.25rem] object-cover"
+                />
+                <div className="px-1 pt-3">
+                  <p className="text-sm font-bold text-slate-950">Friendly local feel</p>
+                  <p className="mt-1 text-sm text-slate-600">
+                    The visual tone stays warm, approachable, and easy to trust.
+                  </p>
+                </div>
+              </Card>
+              <Card className="overflow-hidden border-sky-100 bg-white/95 p-3 shadow-sm">
+                <img
+                  src={brandBubble}
+                  alt="HydroShine color palette cue"
+                  className="aspect-square w-full rounded-[1.25rem] object-cover"
+                />
+                <div className="px-1 pt-3">
+                  <p className="text-sm font-bold text-slate-950">Brand colors</p>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Hydro blue, bright yellow, and clean aqua neutrals.
+                  </p>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6">
+      <section id="why" className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6">
         <div className="grid gap-4 md:grid-cols-4">
-          {features.map((feature) => (
+          {reasons.map((reason) => (
             <Card
-              key={feature.title}
-              className="border-sky-100 bg-white/90 p-5 shadow-sm"
+              key={reason.title}
+              className="border-sky-100 bg-white/92 p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-glow"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-hydro-mist text-hydro-blue">
-                <feature.icon className="h-6 w-6" />
+                <reason.icon className="h-6 w-6" />
               </div>
-              <h2 className="mt-4 text-lg font-bold text-slate-950">{feature.title}</h2>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{feature.text}</p>
+              <h2 className="mt-4 text-lg font-bold text-slate-950">{reason.title}</h2>
+              <p className="mt-2 text-sm leading-7 text-slate-600">{reason.text}</p>
             </Card>
           ))}
         </div>
@@ -301,13 +336,15 @@ export function App() {
 
       <section id="services" className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16">
         <div className="max-w-3xl">
-          <Badge className="bg-white/90 text-hydro-deep">Service menu</Badge>
+          <Badge className="border border-sky-200 bg-white/90 text-hydro-deep">
+            Service menu
+          </Badge>
           <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
             Clear packages. Clear pricing. Easy to book.
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-700">
-            Keep the offer simple. HydrShine works best when customers can see the
-            difference quickly and understand the next step immediately.
+            Customers should understand the offer in seconds. The page stays simple:
+            what it is, what it costs, and how to request a slot.
           </p>
         </div>
 
@@ -316,17 +353,17 @@ export function App() {
             {packages.map((pack) => (
               <Card
                 key={pack.name}
-                className="border-sky-100 bg-white/95 p-6 shadow-sm"
+                className="border-sky-100 bg-white/96 p-6 shadow-sm"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-2xl font-black text-slate-950">{pack.name}</h3>
                     <p className="mt-2 text-sm leading-7 text-slate-600">
-                      {pack.description}
+                      {pack.summary}
                     </p>
                   </div>
-                  <div className="rounded-2xl bg-hydro-mist px-4 py-3 text-right">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-hydro-teal">
+                  <div className="rounded-2xl bg-hydro-yellow/25 px-4 py-3 text-right">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-hydro-deep">
                       Starting at
                     </p>
                     <p className="text-xl font-black text-slate-950">{pack.price}</p>
@@ -344,11 +381,11 @@ export function App() {
             ))}
           </div>
 
-          <Card className="overflow-hidden border-sky-100 bg-white/95 shadow-sm">
+          <Card className="overflow-hidden border-sky-100 bg-white/96 shadow-sm">
             <div className="border-b border-sky-100 px-6 py-5">
               <h3 className="text-2xl font-black text-slate-950">Vehicle pricing</h3>
               <p className="mt-1 text-sm text-slate-600">
-                Keep the table visible so customers can self-qualify fast.
+                Keep the table visible so the customer can self-qualify fast.
               </p>
             </div>
             <div className="overflow-x-auto">
@@ -361,7 +398,7 @@ export function App() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-sky-100 text-sm">
-                  {serviceRows.map(([vehicle, regular, premium]) => (
+                  {priceRows.map(([vehicle, regular, premium]) => (
                     <tr key={vehicle} className="bg-white">
                       <td className="px-6 py-4 font-semibold text-slate-900">{vehicle}</td>
                       <td className="px-6 py-4 text-hydro-deep">{regular}</td>
@@ -392,21 +429,21 @@ export function App() {
         </div>
       </section>
 
-      <section id="proof" className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.05fr]">
-          <Card className="border-sky-100 bg-white/95 p-6 shadow-sm">
+          <Card className="border-sky-100 bg-white/96 p-6 shadow-sm">
             <Badge className="bg-white/90 text-hydro-deep">Why it converts</Badge>
             <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950">
-              The page answers the three questions that matter: what, why, and how fast.
+              It answers the three things people need before they book.
             </h2>
             <div className="mt-6 space-y-4">
               {[
                 ["What", "Premium mobile wash and detailing at your address."],
-                ["Why", "Cleaner car, less time wasted, less friction to book."],
+                ["Why", "Cleaner car, less time wasted, less friction."],
                 ["How fast", "Messenger or short form. No deep navigation."],
               ].map(([label, text]) => (
                 <div key={label} className="flex items-start gap-4 rounded-2xl bg-sky-50 px-4 py-4">
-                  <div className="mt-0.5 h-8 min-w-8 rounded-full bg-hydro-blue text-center text-sm font-black leading-8 text-white">
+                  <div className="mt-0.5 flex h-8 min-w-8 items-center justify-center rounded-full bg-hydro-blue text-sm font-black text-white">
                     {label.slice(0, 1)}
                   </div>
                   <div>
@@ -447,8 +484,8 @@ export function App() {
               Get a quick quote and lock in a clean at your doorstep.
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-700">
-              HydroShine is built for easy decisions: a clear offer, a clear process,
-              and a fast way to start the conversation.
+              HydroShine is built for easy decisions: clear offer, simple form, and a
+              fast path to Messenger if the customer wants it.
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -462,17 +499,21 @@ export function App() {
               <ContactCard
                 icon={Phone}
                 title="Call or text"
-                text="For direct scheduling when you already know what you need."
+                text="For direct scheduling when they already know what they need."
                 cta="Tap to call"
                 href="tel:+15551234567"
               />
             </div>
           </div>
 
-          <Card className="border-sky-100 bg-white/96 p-6 shadow-[0_20px_60px_rgba(14,165,233,0.12)]">
+          <Card className="border-sky-100 bg-white/96 p-6 shadow-glow">
             {submitted ? (
               <div className="rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
-                <CheckCircle2 className="h-10 w-10 text-emerald-600" />
+                <img
+                  src={brandMascot}
+                  alt="HydroShine mascot"
+                  className="h-16 w-16 rounded-2xl object-cover"
+                />
                 <h3 className="mt-4 text-2xl font-black text-slate-950">
                   Request received.
                 </h3>
@@ -511,9 +552,7 @@ export function App() {
                 <Field label="Vehicle">
                   <Input
                     value={lead.vehicle}
-                    onChange={(event) =>
-                      setLead({ ...lead, vehicle: event.target.value })
-                    }
+                    onChange={(event) => setLead({ ...lead, vehicle: event.target.value })}
                     placeholder="Sedan, SUV, pickup, van..."
                     required
                   />
@@ -553,7 +592,7 @@ export function App() {
                   />
                 </Field>
 
-                <Button type="submit" className="w-full rounded-full py-6 text-base">
+                <Button type="submit" className="w-full py-6 text-base">
                   Get a quote
                   <ChevronRight className="h-4 w-4" />
                 </Button>
@@ -569,7 +608,7 @@ export function App() {
 
       <footer className="border-t border-sky-100 bg-white/80">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between">
-          <p className="font-semibold text-slate-800">HydroShine — Clean, Shine, Convenience.</p>
+          <p className="font-semibold text-slate-800">HydroShine - Clean, Shine, Convenience.</p>
           <div className="flex flex-wrap gap-4">
             <a href="/privacy-policy.html" className="transition hover:text-hydro-blue">
               Privacy policy
